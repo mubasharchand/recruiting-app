@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/css/style.css">
+    <title>recruiting articals</title>
+
+</head>
+<body>
+    {{> _header}}
+    {{> _add_btn}}
+    <div class='container'>
+        {{{body}}}
+
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.12.1/ckeditor.js" integrity="sha512-UvcGDOLeiRUzzdU/3/ikx/CGJEp4fWiU6AQ9lbIugIu2KuJ25yivvZ8GQUv9Y/c+TpVH32f7SWpCFeMsKPnD1A==" crossorigin="anonymous"></script>
+
+
+    <script>
+        M.Sidenav.init(document.querySelector('.sidenav'))
+        M.FormSelect.init(document.querySelector('#status'))
+
+        CKEDITOR.replace('body',{
+            plugin: 'wysiwygarea, toolbar, basicstyle,link'
+        })
+    </script>
+
+</body>
+</html>
